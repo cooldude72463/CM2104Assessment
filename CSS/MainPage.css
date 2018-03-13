@@ -1,16 +1,15 @@
 #WebsiteName{
   background-color: yellow;
-  height: auto;
   width: auto;
-  text-align: center;
+  float: left;
 }
 
-#Login{
-  text-align: right;
+#LoginH{
+  display: inline-block;
 }
 
 #mostPopular,#lowestRated,#newestAddition{
-  width: 28%;
+  width: 29%;
   margin: 2%;
   height: auto;
   border: 3px solid green;
@@ -27,9 +26,9 @@
 }
 
 .flex-header{
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
+  display: inline-block;
   border: 3px solid green;
+  margin: 2%;
+  width: 96%;
+  text-align: center;
 }
