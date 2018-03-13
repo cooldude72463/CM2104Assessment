@@ -1,0 +1,28 @@
+#WebsiteName{
+  text-align: center;
+  background-color: yellow;
+  
+}
+
+
+#header{
+    margin: auto;
+    border: 3px solid green;
+}
+
+#mostPopular,#lowestRated,#newestAddition{
+  width: 28%;
+  margin: 2%;
+  height: auto;
+  border: 3px solid green;
+}
+
+#searchBar{
+  text-align: center;
+  margin: 10px;
+}
+
+.flex-container{
+  display: -webkit-flex;
+  display: flex;
+}

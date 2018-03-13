@@ -9,23 +9,21 @@
     <script src="addItem.js"></script>
     -->
     <script type="text/javascript" src="../JS/javascript.js"></script>
+    <link rel="stylesheet" text="text/css" href="../CSS/MainPage.css"></link>
   </head>
 
+  <!--<body background="../Images/RossKemp.jpg"> -->
   <body>
-
-    <div class = "header">
-
-      <h1>Website Name</h1>
-      <p>Login:</p>
-      <form name="Login" method="get" onsubmit="login()">
+    <div id = "header">
+      <h1 id = "WebsiteName">Website Name</h1>
+      <form name="Login" method="get" class = "Login" onsubmit="login()">
         <input type="text" name="q" id="username" placeholder="Username">
         <input type="text" name="q" id="password" placeholder="Password">
         <input type="submit" value="Login">
       </form>
-
     </div>
 
-    <div class = "searchBar">
+    <div id = "searchBar">
 
       <form name="search" method="get" onsubmit="searchH()">
         <input type="text" name="q" id="searchbox" size="50">
@@ -34,21 +32,21 @@
 
     </div>
 
-    <div class = "temp1">
+    <section class="flex-container">
 
-      <div class = "mostPopular">
+      <div id = "mostPopular">
+        <h1>test</h1>
+      </div>
+
+      <div id = "lowestRated">
 
       </div>
 
-      <div class = "lowestRated">
+      <div id = "newestAddition">
 
       </div>
 
-      <div class = "newestAddition">
-
-      </div>
-
-    </div>
+    </section>
 
   </body>
 
