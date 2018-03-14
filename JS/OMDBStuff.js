@@ -1,7 +1,6 @@
-
 $(function(){
   $('#searchform').submit(function(){
-    var searchterms = $("#searchterms").val();
+    var searchterms = $("#searchbox").val();
     getResultsFromOMDB(searchterms);
     return false;
   });
@@ -19,8 +18,8 @@ function addResultTitles(jsondata){
   var htmlstring = "";
   for(var i = 0; i < 10; i++){
     var title = jsondata.Search[i].Title;
-    htmlstring+= "<li>" + title + "</li>";
+    var year = jsondata.Search[i].Year;
+    htmlstring+= "<li>" + title + ", " + year + "</li>";
   }
-  $("#results").html(htmlstring);
-
+  $("#mostPopular").html(htmlstring);
 }
