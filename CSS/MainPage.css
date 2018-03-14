@@ -1,3 +1,9 @@
+body{
+  background: url("../Images/RossKemp.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 #WebsiteName{
   background-color: yellow;
   width: auto;
