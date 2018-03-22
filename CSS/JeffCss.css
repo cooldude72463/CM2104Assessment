@@ -1,11 +1,10 @@
 body{
 background-color: red;
 
-  max-width:960px;
-  margin-left:auto;
-  margin-right:auto;
+  width:60%;
+  margin: 0 auto;
 
-  font-family: Calibri !important;
+  font-family: Comic Sans MS !important;
 }
 
 header{
@@ -15,17 +14,56 @@ header{
 
 main{
   background-color: blue;
-  height: 40%;
-  width: 100%;
+  max-height: 40%;
+  height:200%;
+  max-width: 100%;
+  width:auto;
 }
 
-section{
-  background-color: yellow;
-  height:auto;
-  width: 29.33%;
-  padding-left: 2%;
-  padding-right: 2%;
-  float: left;
+footer{
+  background-color:purple;
+}
+/*
+h1 {
+  margin:0;
+  padding: 0 0 0 0;
+}
+*/
+h2 {
+  margin:0 auto;
+  padding: 0px 0px 0px 0px;
+  text-decoration:none;
+  text-align:center;
+  /*overflow: hidden; */
+  /*list-style-type: none; */
+}
+
+h3 {
+  margin:0 auto;
+  padding: 0px 0px 0px 0px;
+  text-decoration:none;
+  text-align:center;
+}
+.threshold {
+  max-width: 300px;  /* changes per size of image */
+  max-height:300px;
+  margin: 0 auto;
+}
+
+.boxes {
+  height:100%;
+}
+
+#leftbox {
+  background-color:yellow;
+}
+
+#rightbox {
+  background-color:grey;
+}
+
+#midbox {
+  background-color:orange;
 }
 
 #websiteTitle {
@@ -39,6 +77,26 @@ section{
   width:30%;
   height:10%;
   margin:auto auto;
+}
+
+#searchbar{
+  justify-content:center;
+  text-align: left;
+}
+
+.parent {
+  background-color: white;
+  display:flex;
+  flex-flow:nowrap;
+  justify-content:space-evenly;
+  height: 70%;
+}
+
+.child {
+  /*padding: 20px 20px 20px 20px; */
+  /*background-color:purple;*/
+  width:30%;
+  height:100%;
 }
 
 /*nav bar css*/
@@ -66,9 +124,7 @@ li a:hover {
   color: #363636;
 }
 
-#searchbar{
-  text-align: center;
-}
+
 
 
 
