@@ -1,35 +1,56 @@
+html{
+  /*background-color: black;*/
+  background: url("../Images/TommyWiseau.jpg");
+  background-repeat: repeat;
+  background-size: 5%;
+}
+
 body{
-  /*
-  background: url("../Images/RossKemp.jpg");
+
+  /*background: url("../Images/RossKemp.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   */
+
   background-color: lightblue;
   margin-left: 10%;
   margin-right: 10%;
 }
 
-html{
-  background-color: red;
-}
 
 #WebsiteName{
-  background-color: yellow;
+  color: black;
   width: auto;
-  float: left;
+  float: center;
+  /*
+  font-style: oblique;
+  font-size: 18;
+  */
 }
+
 
 #LoginH{
   display: inline-block;
+
+}
+
+#settings{
+  display: inline-block;
+  float: left;
+
   margin-top: 2%;
   margin-left: 40%;
+
 }
 
 #mostPopular,#lowestRated,#newestAddition{
   width: 29%;
   margin: 2%;
   height: auto;
-  border: 3px solid green;
+  font-family: sans-serif;
+  text-align: center;
+  border: 3px solid black;
+  background-color: white;
 }
 
 #subheader{
@@ -39,7 +60,6 @@ html{
 
 #searchBar{
   text-align: center;
-  margin: 10px;
 }
 
 .flex-content{
@@ -49,7 +69,7 @@ html{
 
 .flex-header{
   display: inline-block;
-  border: 3px solid green;
+  border: 3px solid black;
   margin: 2%;
   width: 96%;
   text-align: center;
