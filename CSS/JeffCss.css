@@ -12,7 +12,7 @@ header{
   background-color: green;
   height:30%;
 }
-s
+
 main{
   background-color: blue;
   height: 40%;
@@ -32,6 +32,9 @@ section{
   float: left;
 }
 
+#loginNLogout{
+  
+}
 
 #websiteTitle {
   background-color: white;
@@ -41,9 +44,9 @@ section{
 #menubar {
   background-color:purple;
 
-  width:30%;
+  /*width:30%;*/
   height:10%;
-  margin:auto auto;
+  margin:auto;
 }
 
 /*nav bar css*/
@@ -73,6 +76,7 @@ li a:hover {
 
 #searchbar{
   text-align: center;
+  padding-top:5%;
 }
 
 
