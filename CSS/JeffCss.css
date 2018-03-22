@@ -20,11 +20,12 @@ main{
 }
 
 section{
-  background-color: orange;
+  background-color: yellow;
   height:auto;
-  width:30%;
-  padding:
-  float:left;
+  width: 29.33%;
+  padding-left: 2%;
+  padding-right: 2%;
+  float: left;
 }
 
 #websiteTitle {
