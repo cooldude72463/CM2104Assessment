@@ -1,6 +1,3 @@
-// https://www.themoviedb.org/documentation/api
-// Need to use this api for stuff like most popular, etc.
-
 function validate(){
   var searchbox = document.getElementById("searchbox");
 	var searchvalue = searchbox.value;
@@ -30,26 +27,32 @@ function yes(){
     value += string[i] + " ";
   }
   console.log(value);
-	getResultsFromOMDB(value);
+
+  getResultsFromTMDB(value);
   return false;
 }
 
-function getResultsFromOMDB(searchterms){
-  var url = "http://www.omdbapi.com/?apikey=a40072ee&s=" + searchterms;
+function getResultsFromTMDB(value){
+  var url = "https://api.themoviedb.org/3/search/multi?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page=1&include_adult=false&query="+value;
   $.getJSON(url, function(jsondata){
-  addResultTitles(jsondata);
+    addResultTitles(jsondata);
   });
 }
 
+
 function addResultTitles(jsondata){
-  var url = "http://img.omdbapi.com/?apikey=a40072ee&s=";
   var htmlstring = "";
-  for(var i = 0; i < 10; i++){
-    var title = jsondata.Search[i].Title;
-    var year = jsondata.Search[i].Year;
-    //$.getJSON(url + title, function(jsondataP){
-    htmlstring = "<div id = test>" + title + ", " + year + "</div>";
+  //console.log(jsondata);
+  for(var i = 0; i < jsondata.results.length-1; i++){
+    var poster = jsondata.results[i].posterpath;
+    console.log(poster);
+    var postery = "poster";
+    var title = jsondata.results[i].original_title;
+    var year = jsondata.results[i].release_date;
+    var img = "<img src="+poster+" alt="+postery+"> ";
+
+    htmlstring = "<div id = test>" +  img + ", " + title + ", " + year + "</div>";
+    //console.log(title + ", " + year);
     $("#searchResults").append(htmlstring);
   }
-
 }
