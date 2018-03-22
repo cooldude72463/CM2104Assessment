@@ -26,6 +26,7 @@ main{
 
 footer{
   background-color:white;
+  text-align: center;
 }
 
 /* end of section manipulation */
@@ -76,9 +77,9 @@ h3 {
 
 .child {
   /*padding: 20px 20px 20px 20px; */
-  /*background-color:purple;*/
+  background-color:purple;
   width:30%;
-  height:100%;
+  height:80%;
 }
 
 /* end of container manipulation */
@@ -87,14 +88,21 @@ h3 {
 #menubar {
   position:absolute;
   top:15%;
-  width:60%;
   text-align:center;
-
+  right: 46%;
+  width: 150px;
+  height:10%;
+  margin:auto auto;
 }
+
+#menubar>nav>ul>li>a{
+  color:#fff;
+}
+
 
 #searchbar {
   top:20%;
-  left:30%;
+  left:41%;
   position:absolute;
   justify-content:center;
   text-align: left;
@@ -124,25 +132,18 @@ h3 {
 #leftbox {
   /*background-color:#C0C5C1; */
   background-color:#611C35;
-  font-color:white;
 }
-font color white;
+
 
 #rightbox {
-  background-color:#124E78;
+  background-color:#861657;
 }
 
 #midbox {
   background-color:#124E78;
 }
 
-#menubar {
-  background-color:purple;
 
-  width:30%;
-  height:10%;
-  margin:auto auto;
-}
 
 #submit {
   /*padding:0 0 0 0;
@@ -152,6 +153,7 @@ font color white;
 #searchform {
   paddding: 0 0 0 0;
   margin:0;
+
 }
 
 #searchbox {
@@ -186,6 +188,10 @@ li a:hover {
   color: #363636;
 }
 
+#seemore{
+
+
+}
 
 
 
