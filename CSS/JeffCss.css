@@ -1,34 +1,40 @@
-body{
-background-color: red;
+/* main section manipulation */
 
+body{
+  background-color:#131E3C;
   width:60%;
   margin: 0 auto;
 
-  font-family: Comic Sans MS !important;
+  font-family: 'Viga', sans-serif;
 }
 
 header{
-  background-color: green;
+  /*background-color: #7D8491; */
+  background-color:yellow;
   height:30%;
+
+  /*font-family: 'Pacifico', cursive !important */;
 }
 
 main{
-  background-color: blue;
-  max-height: 40%;
-  height:200%;
+  background-color: red;
+  max-height: 60%;
+  height:100%;
   max-width: 100%;
   width:auto;
 }
 
 footer{
-  background-color:purple;
+  background-color:blue;
 }
-/*
+
+/* end of section manipulation */
+
+/* Text and Caption manipulation */
 h1 {
-  margin:0;
-  padding: 0 0 0 0;
+  font-family: 'Pacifico', cursive;
 }
-*/
+
 h2 {
   margin:0 auto;
   padding: 0px 0px 0px 0px;
@@ -40,13 +46,17 @@ h2 {
 
 h3 {
   margin:0 auto;
-  padding: 0px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
   text-decoration:none;
   text-align:center;
 }
+
+/* End of text and caption manipuloation */
+
+/* container manipulation */
 .threshold {
-  max-width: 300px;  /* changes per size of image */
-  max-height:300px;
+  max-width: 75%;  /* changes per size of image */
+  max-height:100%;
   margin: 0 auto;
 }
 
@@ -54,12 +64,31 @@ h3 {
   height:100%;
 }
 
+.parent {
+  background-color: white;
+  display:flex;
+  flex-flow:nowrap;
+  justify-content:space-evenly;
+  height: 100%;
+}
+
+.child {
+  /*padding: 20px 20px 20px 20px; */
+  /*background-color:purple;*/
+  width:30%;
+  height:100%;
+}
+
+/* end of container manipulation */
+
+/* element manipulation */
 #leftbox {
-  background-color:yellow;
+  /*background-color:#C0C5C1; */
+  background-color:#124E78;
 }
 
 #rightbox {
-  background-color:grey;
+  background-color:purple;
 }
 
 #midbox {
@@ -67,7 +96,7 @@ h3 {
 }
 
 #websiteTitle {
-  background-color: white;
+  background-color: green;
   text-align:center;
 }
 
@@ -84,20 +113,7 @@ h3 {
   text-align: left;
 }
 
-.parent {
-  background-color: white;
-  display:flex;
-  flex-flow:nowrap;
-  justify-content:space-evenly;
-  height: 70%;
-}
-
-.child {
-  /*padding: 20px 20px 20px 20px; */
-  /*background-color:purple;*/
-  width:30%;
-  height:100%;
-}
+/* end ofelement manipulation */
 
 /*nav bar css*/
 nav>ul {
