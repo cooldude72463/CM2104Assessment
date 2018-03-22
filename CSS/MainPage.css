@@ -4,12 +4,16 @@ body{
   background-repeat: no-repeat;
   background-size: 100%;
   */
-  background-color: lightblue;
+
+  background-color: white;
+
   margin-left: 10%;
   margin-right: 10%;
 }
 
-
+html{
+  background-color: red;
+}
 
 #WebsiteName{
   background-color: yellow;
