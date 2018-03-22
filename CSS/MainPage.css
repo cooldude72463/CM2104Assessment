@@ -67,7 +67,7 @@ h3 {
 }
 
 .parent {
-  background-color: white;
+  background-color: #914D76;
   display:flex;
   flex-flow:nowrap;
   justify-content:space-evenly;
@@ -86,8 +86,10 @@ h3 {
 /* element manipulation */
 #menubar {
   position:absolute;
-  margin:0 auto;
-  top:0%;
+  top:15%;
+  width:60%;
+  text-align:center;
+
 }
 
 #searchbar {
@@ -121,8 +123,10 @@ h3 {
 
 #leftbox {
   /*background-color:#C0C5C1; */
-  background-color:#124E78;
+  background-color:#611C35;
+  font-color:white;
 }
+font color white;
 
 #rightbox {
   background-color:#124E78;
