@@ -42,17 +42,25 @@ function getResultsFromTMDB(value){
 function addResultTitles(jsondata){
   var htmlstring = "";
   //console.log(jsondata);
-
-  for(var i = 0; i < 10; i++){
+  var counter = 0;
+  for(var i = 0; counter < 10; i++){
     var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[i].poster_path;
     console.log(poster);
-    var title = jsondata.results[i].original_title;
+    var title = jsondata.results[i].title;
     var year = jsondata.results[i].release_date;
-    var x = "<img src="+poster+" alt=poster>";
+    var img = "<img src="+poster+" alt=poster>";
+    if(title == null){
 
-    htmlstring = "<div id = test>" +  x + ", " + title + ", " + year + "</div>";
-
-    $("#searchResults").append(htmlstring);
+    } else {
+      var imgString =  "<div class = oneMovie> <div class = image>" +  img + "</div>";
+      var titleString = "<div class = title> Title:" + title + "  </div>";
+      var yearString = "<div class = year>Release Year:" + year + "</div></div>";
+      htmlstring = imgString + titleString + yearString;
+      console.log(htmlstring);
+      //htmlstring = "<div class = oneMovie> <div class = image>" +  img + "</div> <div class = title> Title:" + title + "  </div> <div class = year>Release Year:" + year + "</div></div>";
+      $("#searchResults").append(htmlstring);
+      counter++;
+    }
   }
 }
 
