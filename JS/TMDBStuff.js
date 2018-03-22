@@ -42,6 +42,7 @@ function getResultsFromTMDB(value){
 function addResultTitles(jsondata){
   var htmlstring = "";
   //console.log(jsondata);
+
   for(var i = 0; i < 10; i++){
     var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[i].poster_path;
     console.log(poster);
