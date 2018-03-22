@@ -6,6 +6,7 @@ body{
   margin: 0 auto;
 
   font-family: 'Viga', sans-serif;
+  font-color:white;
 }
 
 header{
@@ -25,6 +26,7 @@ main{
 }
 
 footer{
+  text-align:center;
   background-color:white;
 }
 
@@ -42,6 +44,7 @@ h2 {
   padding: 0px 0px 0px 0px;
   text-decoration:none;
   text-align:center;
+  color:white;
   /*overflow: hidden; */
   /*list-style-type: none; */
 }
@@ -51,6 +54,7 @@ h3 {
   padding: 10px 0px 0px 0px;
   text-decoration:none;
   text-align:center;
+  color:white;
 }
 
 /* End of text and caption manipuloation */
@@ -67,7 +71,7 @@ h3 {
 }
 
 .parent {
-  background-color: white;
+  background-color: #914D76;
   display:flex;
   flex-flow:nowrap;
   justify-content:space-evenly;
@@ -78,7 +82,7 @@ h3 {
   /*padding: 20px 20px 20px 20px; */
   /*background-color:purple;*/
   width:30%;
-  height:100%;
+  height:65%;
 }
 
 /* end of container manipulation */
@@ -121,15 +125,18 @@ h3 {
 
 #leftbox {
   /*background-color:#C0C5C1; */
-  background-color:#124E78;
+  background-color:#611C35;
+  font-color:white;
 }
 
 #rightbox {
-  background-color:#124E78;
+  background-color:#611C35;
+  font-color:white;
 }
 
 #midbox {
-  background-color:#124E78;
+  background-color:#611C35;
+  font-color:white;
 }
 
 #menubar {
