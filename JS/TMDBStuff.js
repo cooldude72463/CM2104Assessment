@@ -27,7 +27,6 @@ function yes(){
     value += string[i] + " ";
   }
   console.log(value);
-
   getResultsFromTMDB(value);
   return false;
 }

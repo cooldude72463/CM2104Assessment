@@ -1,6 +1,3 @@
-// https://www.themoviedb.org/documentation/api
-// Need to use this api for stuff like most popular, etc.
-
 function validate(){
   var searchbox = document.getElementById("searchbox");
 	var searchvalue = searchbox.value;
