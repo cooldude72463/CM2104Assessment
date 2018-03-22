@@ -4,8 +4,13 @@ body{
   background-repeat: no-repeat;
   background-size: 100%;
   */
+  background-color: red;
 }
 
+.bodyTest{
+  margin-left: 10%;
+  margin-right: 10%;
+}
 #WebsiteName{
   background-color: yellow;
   width: auto;
