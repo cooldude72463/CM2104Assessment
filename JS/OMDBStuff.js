@@ -22,10 +22,10 @@ function yes(){
   }
 
   var string = value.split("+");
+  value = "";
   for(i = 0; i < string.length; i++){
     value += string[i] + " ";
   }
-  
   console.log(value);
 	getResultsFromOMDB(value);
   return false;
