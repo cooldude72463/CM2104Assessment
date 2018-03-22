@@ -19,14 +19,18 @@ main{
   width: 100%;
 }
 
-section{
+#showMovies{
   background-color: yellow;
+}
+section{
+  background-color: orange;
   height:auto;
   width: 29.33%;
-  padding-left: 2%;
-  padding-right: 2%;
+  /*padding-left: 2%;
+  padding-right: 2%;*/
   float: left;
 }
+
 
 #websiteTitle {
   background-color: white;

@@ -7,6 +7,8 @@
     <title>Movie Review Hub</title>
 
     <link rel="stylesheet" text="text/css" href="../CSS/JeffCss.css"></link>
+    <script type="text/javascript" src="../JS/OMDBStuff.js"></script>
+    <script type="text/javascript" src="../JS/test.js"></script>
 
   </head>
 
@@ -28,8 +30,8 @@
         </div>
 
         <div id = "searchbar">
-          <form name="search" method="get" id = "searchform">
-            <input type="text" id="searchbox" size="50">
+          <form name="search" method="get" onsubmit="return validate()" action="SearchPage.html" id = "searchform">
+            <input type="text" name = "q" id="searchbox" size="50">
     			  <input type="submit" value="Click to Die" id = "submit">
           </form>
         </div>
@@ -37,36 +39,37 @@
       </header>
 
       <main>
+        <div id = "showMovies">
+          <section> <!--LEFT MOVIE SECTION -->
+            <h1>Most Popular</h1>
 
-        <section> <!--LEFT MOVIE SECTION -->
-          <h1>Most Popular</h1>
+            <div> <!-- Image Threshold -->
+              <img src="../Images/placeholder.jpg" alt="">
+            </div>
 
-          <div> <!-- Image Threshold -->
-            <img src="../Images/placeholder.jpg" alt="">
-          </div>
+            <h2>Movie Title</h2>
+          </section>
 
-          <h2>Movie Title</h2>
-        </section>
+          <section> <!--MID MOVIE SECTION -->
+            <h1>Lowest Rated</h1>
 
-        <section> <!--MID MOVIE SECTION -->
-          <h1>Lowest Rated</h1>
+            <div> <!-- Image Threshold -->
+              <img src="../Images/placeholder.jpg" alt="">
+            </div>
 
-          <div> <!-- Image Threshold -->
-            <img src="../Images/placeholder.jpg" alt="">
-          </div>
+            <h2>Movie Title</h2>
+          </section>
 
-          <h2>Movie Title</h2>
-        </section>
+          <section> <!--RIGHT MOVIE SECTION -->
+            <h1>New Additions</h1>
 
-        <section> <!--RIGHT MOVIE SECTION -->
-          <h1>New Additions</h1>
+            <div> <!-- Image Threshold -->
+              <img src="../Images/placeholder.jpg" alt="">
+            </div>
 
-          <div> <!-- Image Threshold -->
-            <img src="../Images/placeholder.jpg" alt="">
-          </div>
-
-          <h2>Movie Title</h2>
-        </section>
+            <h2>Movie Title</h2>
+          </section>
+        </div>
 
       </main>
 
