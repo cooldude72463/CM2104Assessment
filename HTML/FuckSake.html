@@ -37,8 +37,10 @@
         </div>
 
         <div id = "searchbar">
-          <input type="search" id="searchbar" name="q" placeholder="Enter Media">
-          <button>Search</button>
+          <form name="search" method="get" onsubmit="return validate()" action="SearchPage.html" id = "searchform">
+            <input type="text" name = "q" id="searchbox" size="50">
+    			  <input type="submit" value="Click to Die" id = "submit">
+          </form>
         </div>
 
       </header>
