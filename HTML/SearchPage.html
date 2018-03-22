@@ -1,14 +1,43 @@
 <html>
 
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="../JS/OMDBStuff.js"></script>-->
+    <script type="text/javascript" src="../JS/TMDBStuff.js"></script>
+
+    <link rel="stylesheet" text="text/css" href="../CSS/JeffCss.css"></link>
+    <link rel="stylesheet" text="text/css" href="../CSS/SearchPage.css"></link>
+
     <meta charset="utf-8">
+
     <title>SearchPage</title>
 
   </head>
+  <header>
+    <div id="websiteTitle"> <!--Website Title-->
+      <h1>Website Title</h1>
+    </div>
 
-  <body>
+    <div id="menubar"> <!-- holds the menubar -->
+      <nav> <!--Login and Logout Menubar-->
+        <ul>
+          <li><a href="#">Login</li>
+          <li><a href="#">Logout</li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id = "searchbar">
+      <form name="search" method="get" onsubmit="return validate()" action="SearchPage.html" id = "searchform">
+        <input type="text" name = "q" id="searchbox" size="50">
+        <input type="submit" value="Click to Die" id = "submit">
+      </form>
+    </div>
+  </header>
+
+  <body onload="yes()">
     <div id = "searchResults">
-      <h1>hey</h1>
+
     </div>
   </body>
 
