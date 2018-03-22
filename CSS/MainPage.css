@@ -4,7 +4,7 @@ body{
   background-repeat: no-repeat;
   background-size: 100%;
   */
-  background-color: red;
+  background-color: lightblue;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -19,6 +19,8 @@ body{
 
 #LoginH{
   display: inline-block;
+  margin-top: 2%;
+  margin-left: 40%;
 }
 
 #mostPopular,#lowestRated,#newestAddition{
@@ -26,6 +28,11 @@ body{
   margin: 2%;
   height: auto;
   border: 3px solid green;
+}
+
+#subheader{
+  text-align:left;
+  margin-left: 10%;
 }
 
 #searchBar{
