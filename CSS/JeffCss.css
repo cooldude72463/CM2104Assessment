@@ -77,14 +77,14 @@ h3 {
 #menubar {
   background-color:purple;
 
-  width:30%;
+  width:16%;
   height:10%;
   margin:auto auto;
 }
 
 #searchbar{
   justify-content:center;
-  text-align: left;
+  text-align: center;
 }
 
 .parent {
@@ -108,7 +108,6 @@ nav>ul {
   margin:0;
   padding:0;
   overflow:hidden;
-
 }
 
 nav>ul>li {
