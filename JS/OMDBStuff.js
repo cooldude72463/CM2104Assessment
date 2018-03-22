@@ -20,6 +20,12 @@ function yes(){
 	   var name = nvPair[0];
 	   var value = nvPair[1];
   }
+
+  var string = value.split("+");
+  for(i = 0; i < string.length; i++){
+    value += string[i] + " ";
+  }
+  
   console.log(value);
 	getResultsFromOMDB(value);
   return false;
