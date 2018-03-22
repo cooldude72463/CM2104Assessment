@@ -25,7 +25,7 @@ main{
 }
 
 footer{
-  background-color:blue;
+  background-color:white;
 }
 
 /* end of section manipulation */
@@ -34,6 +34,7 @@ footer{
 h1 {
   font-family: 'Pacifico', cursive;
   color:white;
+  font-size: 48;
 }
 
 h2 {
@@ -83,6 +84,20 @@ h3 {
 /* end of container manipulation */
 
 /* element manipulation */
+#menubar {
+  position:absolute;
+  margin:0 auto;
+  top:0%;
+}
+
+#searchbar {
+  top:20%;
+  left:30%;
+  position:absolute;
+  justify-content:center;
+  text-align: left;
+}
+
 #bannerZone {
   width:100%;
   height:100%;
@@ -98,6 +113,8 @@ h3 {
   /* background-color: red; */
   /* height:20%; */
   width:60%;
+  /*margin:0 auto; */
+  top:0%;
   position:absolute;
   text-align:center;
 }
@@ -108,11 +125,11 @@ h3 {
 }
 
 #rightbox {
-  background-color:purple;
+  background-color:#124E78;
 }
 
 #midbox {
-  background-color:orange;
+  background-color:#124E78;
 }
 
 #menubar {
@@ -123,9 +140,19 @@ h3 {
   margin:auto auto;
 }
 
-#searchbar{
-  justify-content:center;
-  text-align: left;
+#submit {
+  /*padding:0 0 0 0;
+  margin:0; */
+}
+
+#searchform {
+  paddding: 0 0 0 0;
+  margin:0;
+}
+
+#searchbox {
+  padding: 0 0 0 0;
+  /*margin:0; */
 }
 
 /* end ofelement manipulation */
