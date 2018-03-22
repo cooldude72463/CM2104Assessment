@@ -18,26 +18,27 @@
 
   <!--<body background="../Images/RossKemp.jpg">-->
   <body>
+    <div>
       <section class="flex-header">
         <h1 id = "websiteName">Website Name</h1>
         <form name="Login" method="get" id = "LoginH" onsubmit="login()">
             <input type="text" name="q" id="username" placeholder="Username">
             <input type="text" name="q" id="password" placeholder="Password">
-            <input types="submit" value="Login">
+            <input type="submit" value="Login">
         </form>
       </section>
+    </div>
 
-      <div id = "searchBar">
+    <div id = "searchBar">
+      <form name="search" method="get" id = "searchform">
+        <input type="text" id="searchbox" size="50">
+  			  <input type="submit" value="Search" id = "submit">
+      </form>
 
-        <form name="search" method="get" id = "searchform">
-          <input type="text" id="searchbox" size="50">
-  			   <input type="submit" value="Search" id = "submit">
-        </form>
+    </div>
 
-      </div>
+    <section class="flex-content">
 
-      <section class="flex-content">
-      <div>
         <div id = "mostPopular">
           <h1>test</h1>
         </div>
@@ -49,7 +50,7 @@
         <div id = "newestAddition">
 
         </div>
-      </div>
+
     </section>
 
   </body>
