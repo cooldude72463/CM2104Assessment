@@ -42,15 +42,16 @@ function getResultsFromTMDB(value){
 function addResultTitles(jsondata){
   var htmlstring = "";
   //console.log(jsondata);
-  for(var i = 0; i < jsondata.results.length-1; i++){
+  for(var i = 0; i < 10; i++){
     var poster = jsondata.results[i].posterpath;
+    src = poster + ".png";
     console.log(poster);
     var postery = "poster";
     var title = jsondata.results[i].original_title;
     var year = jsondata.results[i].release_date;
-    var img = "<img src="+poster+" alt="+postery+"> ";
+    //var img = "<img src="+poster+" alt=poster> ";
 
-    htmlstring = "<div id = test>" +  img + ", " + title + ", " + year + "</div>";
+    htmlstring = "<div id = test>" +  src + ", " + title + ", " + year + "</div>";
     //console.log(title + ", " + year);
     $("#searchResults").append(htmlstring);
   }
