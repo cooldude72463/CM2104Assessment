@@ -1,5 +1,8 @@
 html{
-  background-color: black;
+  /*background-color: black;*/
+  background: url("../Images/TommyWiseau.jpg");
+  background-repeat: repeat;
+  background-size: 5%;
 }
 
 body{
@@ -28,7 +31,7 @@ body{
 #LoginH{
   display: inline-block;
   float: right;
-  margin-top: 2%;
+  /*margin-top: 2%;*/
 }
 
 #settings{
