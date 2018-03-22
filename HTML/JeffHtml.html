@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
 
-    <title>Movie Review Hub</title>
+    <title id = "Title">Movie Review Hub</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" text="text/css" href="../CSS/JeffCss.css"></link>
     <!--<script type="text/javascript" src="../JS/OMDBStuff.js"></script>-->
@@ -13,7 +13,7 @@
 
   </head>
 
-  <body>
+  <body onload="motd()">
 
       <header>
 
@@ -22,7 +22,7 @@
         </div>
 
         <div id="menubar"> <!-- holds the menubar -->
-          <nav> <!--Login and Logout Menubar-->
+          <nav id="loginNLogout"> <!--Login and Logout Menubar-->
             <ul>
               <li><a href="#">Login</a></li>
               <li><a href="#">Logout</a></li>

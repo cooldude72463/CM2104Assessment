@@ -12,7 +12,7 @@ header{
   background-color: green;
   height:30%;
 }
-s
+
 main{
   background-color: blue;
   max-height: 40%;
@@ -68,6 +68,9 @@ h3 {
   background-color:orange;
 }
 
+#loginNLogout{
+  
+}
 
 #websiteTitle {
   background-color: white;
@@ -77,9 +80,9 @@ h3 {
 #menubar {
   background-color:purple;
 
-  width:30%;
+  /*width:30%;*/
   height:10%;
-  margin:auto auto;
+  margin:auto;
 }
 
 #searchbar{
@@ -126,7 +129,6 @@ nav>ul>li a {
 li a:hover {
   color: #363636;
 }
-
 
 
 
