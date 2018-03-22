@@ -42,16 +42,23 @@ function getResultsFromTMDB(value){
 function addResultTitles(jsondata){
   var htmlstring = "";
   //console.log(jsondata);
-  for(var i = 0; i < jsondata.results.length-1; i++){
-    var poster = jsondata.results[i].posterpath;
+
+  for(var i = 0; i < 10; i++){
+    var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[i].poster_path;
     console.log(poster);
-    var postery = "poster";
     var title = jsondata.results[i].original_title;
     var year = jsondata.results[i].release_date;
-    var img = "<img src="+poster+" alt="+postery+"> ";
+    var x = "<img src="+poster+" alt=poster>";
 
-    htmlstring = "<div id = test>" +  img + ", " + title + ", " + year + "</div>";
-    //console.log(title + ", " + year);
+    htmlstring = "<div id = test>" +  x + ", " + title + ", " + year + "</div>";
+
     $("#searchResults").append(htmlstring);
   }
+}
+
+function motd(){
+  var motdArray = [" I did not hit her, it's not true! It's bullshit! I did not hit her! [throws water bottle]","Oh hi Mark!","Hi doggie!","You betrayed me! You're not good. You, you're just a chicken. Chip-chip-chip-chip-cheep-cheep."];
+
+  document.getElementById("Title").innerHTML = motdArray[Math.floor((Math.random() * motdArray.length-1) + 1)];
+  //document.getElementById("subheader").innerHTML = motdArray[Math.floor((Math.random() * motdArray.length-1) + 1)];
 }

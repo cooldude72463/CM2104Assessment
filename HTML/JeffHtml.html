@@ -4,9 +4,12 @@
 
     <meta charset="utf-8">
 
-    <title>Movie Review Hub</title>
-
+    <title id = "Title">Movie Review Hub</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" text="text/css" href="../CSS/JeffCss.css"></link>
+    <!--<script type="text/javascript" src="../JS/OMDBStuff.js"></script>-->
+    <script type="text/javascript" src="../JS/TMDBStuff.js"></script>
+
 
     <!-- google font title -->
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
@@ -15,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
   </head>
 
-  <body>
+  <body onload="motd()">
 
       <header>
 
@@ -24,7 +27,7 @@
         </div>
 
         <div id="menubar"> <!-- holds the menubar -->
-          <nav> <!--Login and Logout Menubar-->
+          <nav id="loginNLogout"> <!--Login and Logout Menubar-->
             <ul>
               <li><a href="#">Login</a></li>
               <li><a href="#">Logout</a></li>
@@ -33,8 +36,12 @@
         </div>
 
         <div id = "searchbar">
-          <input type="search" id="searchbar" name="q" placeholder="Enter Media">
-          <button>Search</button>
+
+          <form name="search" method="get" onsubmit="return validate()" action="SearchPage.html" id = "searchform">
+            <input type="text" name = "q" id="searchbox" size="50">
+    			  <input type="submit" value="Click to Die" id = "submit">
+          </form>
+
         </div>
 
       </header>
@@ -48,6 +55,7 @@
               <div class="threshold"> <!-- image threshold -->
                 <img src="../Images/placeholder.jpg" width="100%" alt="">
               </div>
+
               <h3>Movie Title</h3>
             </section>
           </div>
@@ -72,6 +80,7 @@
             </section>
           </div>
         </div>
+
 
 
 
@@ -101,38 +110,6 @@
 
 
 
-      <!--<section class="flex-header">
-        <h1 id = "websiteName">Website Name</h1>
-        <form name="Login" method="get" id = "LoginH" onsubmit="login()">
-            <input type="text" name="q" id="username" placeholder="Username">
-            <input type="text" name="q" id="password" placeholder="Password">
-            <input type="submit" value="Login">
-        </form>
-      </section>
-
-      <div id = "searchBar">
-
-        <form name="search" method="get" id = "searchform">
-          <input type="text" id="searchbox" size="50">
-  			   <input type="submit" value="Search" id = "submit">
-        </form>
-
-      </div>
-
-      <section class="flex-content">
-
-        <div id = "mostPopular">
-          <h1>test</h1>
-        </div>
-
-        <div id = "lowestRated">
-
-        </div>
-
-        <div id = "newestAddition">
-
-        </div>
-    </section> -->
 
 
 
