@@ -1,0 +1,17 @@
+#test{
+  height: 150px;
+  display:flex;
+  flex-flow:nowrap;
+  float: left;
+}
+
+.image{
+  width: 92px;
+}
+
+#searchResults{
+  float: left;
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
