@@ -54,8 +54,7 @@ function addResultTitles(jsondata){
     } else {
 
       var temp1 = "<div id=clickedItem>"
-      var temp2 = "<form method=get action=MoviePage>"
-      var temp3 = "<input type=text name=t value="+title+"></form>"
+      var temp3 = "<a name = "+"t"+" href="+"MoviePage?="+title+">"
       var temp4 = "<div class = image>" +  img + "</div>"
       var temp5 = "<div class = title>" + title + "</div>"
       var temp6 = "</div>"
@@ -67,7 +66,7 @@ function addResultTitles(jsondata){
       //var yearString = "<div class = year>Release Year:" + year + "</div></div>";
       htmlstring = link + imgString + titleString;
       */
-      htmlstring = temp1 + temp2 + temp3 + temp4 + temp5 + temp6
+      htmlstring = temp1 + temp3 + temp4 + temp5 + temp6
       console.log(htmlstring);
       //htmlstring = "<div class = oneMovie> <div class = image>" +  img + "</div> <div class = title> Title:" + title + "  </div> <div class = year>Release Year:" + year + "</div></div>";
       $("#searchResults").append(htmlstring);
