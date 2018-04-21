@@ -54,7 +54,7 @@ function addResultTitles(jsondata){
     } else {
 
       var temp1 = "<div id=clickedItem>"
-      var temp3 = "<a name = "+"t"+" href="+"MoviePage?="+title+">"
+      var temp3 = "<a href=/MoviePage?="+title+">"
       var temp4 = "<div class = image>" +  img + "</div>"
       var temp5 = "<div class = title>" + title + "</div>"
       var temp6 = "</div>"
