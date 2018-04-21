@@ -52,7 +52,7 @@ function addResultTitles(jsondata){
     if(title == null){
 
     } else {
-      var movie1 = "<div class = link> <a name = "+"t"+" href="+"MoviePage"+title+">";
+      var link = "<div class = link> <a name = "+"t"+" href="+"MoviePage"+title+">";
       var imgString =  "<div class = image>" +  img + "</div>";
       var titleString = "<div class = title>" + title + "  </div></div>";
       //var yearString = "<div class = year>Release Year:" + year + "</div></div>";
