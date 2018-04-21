@@ -55,10 +55,10 @@ function addResultTitles(jsondata){
 
       var temp1 = "<div id=clickedItem>"
       var temp2 = "<form method=get action=MoviePage>"
-      var temp3 = "<a name = t>"
+      var temp3 = "<input type=text name=t value="title"></form>"
       var temp4 = "<div class = image>" +  img + "</div>"
       var temp5 = "<div class = title>" + title + "</div>"
-      var temp6 = "</form> </div>"
+      var temp6 = "</div>"
 
       /*
       var link = "<div class = link> <a name = "+"t"+" href="+"MoviePage"+title+">";
