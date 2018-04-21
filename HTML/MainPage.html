@@ -1,0 +1,152 @@
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title id="Title">Movie Review Hub</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../JS/TMDBAPI.js"></script>
+    <link rel="stylesheet" text="text/css" href="../CSS/MainPage.css"></link>
+
+    <!-- google font title -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <!-- google font body -->
+    <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+  </head>
+
+  <body onload="motd()">
+
+      <header>
+
+        <div id="bannerZone">
+          <img src="../Images/water.gif" id="banner" alt="This will display an animated GIF" />
+        </div>
+
+        <div id="websiteTitle"> <!--Website Title-->
+          <h1>Website Name</h1>
+        </div>
+
+        <div id="menubar"> <!-- holds the menubar -->
+          <nav> <!--Login and Logout Menubar-->
+            <ul>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div id="searchbar">
+          <form name="search" method="get" onsubmit="return validate()" action="SearchPage.html" id="searchform">
+            <input type="text" name = "q" id="searchbox" size="40">
+    			  <input type="submit" value="X" id="submit">
+          </form>
+        </div>
+
+      </header>
+
+      <main>
+
+        <div class="parent">
+          <div class="child">
+            <section class="boxes" id="leftbox">
+              <h2>Newest Additions<h2>
+              <div class="threshold"> <!-- image threshold -->
+                <img src="../Images/placeholder.jpg" width="100%" alt="">
+              </div>
+              <h3>Movie Title</h3>
+              <button id="seemore">See more...</button>
+            </section>
+          </div>
+
+          <div class="child">
+            <section class="boxes" id="midbox">
+              <h2>Least Popular<h2>
+              <div class="threshold"> <!-- image threshold -->
+                <img src="../Images/placeholder.jpg" width="100%" alt="">
+              </div>
+              <h3>Movie Title</h3>
+              <button id="seemore">See more...</button>
+            </section>
+          </div>
+
+          <div class="child">
+            <section class="boxes" id="rightbox">
+              <h2>Lowest Rated<h2>
+              <div class="threshold"> <!-- image threshold -->
+                <img src="../Images/placeholder.jpg" width="100%" alt="">
+              </div>
+              <h3>Movie Title</h3>
+              <button id="seemore">See more...</button>
+            </section>
+          </div>
+        </div>
+
+
+
+      </main>
+
+      <footer>
+        <p>(c)2002 Channing Tatum</p>
+      </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--<section class="flex-header">
+        <h1 id = "websiteName">Website Name</h1>
+        <form name="Login" method="get" id = "LoginH" onsubmit="login()">
+            <input type="text" name="q" id="username" placeholder="Username">
+            <input type="text" name="q" id="password" placeholder="Password">
+            <input type="submit" value="Login">
+        </form>
+      </section>
+
+      <div id = "searchBar">
+
+        <form name="search" method="get" id = "searchform">
+          <input type="text" id="searchbox" size="50">
+  			   <input type="submit" value="Search" id = "submit">
+        </form>
+
+      </div>
+
+      <section class="flex-content">
+
+        <div id = "mostPopular">
+          <h1>test</h1>
+        </div>
+
+        <div id = "lowestRated">
+
+        </div>
+
+        <div id = "newestAddition">
+
+        </div>
+    </section> -->
+
+
+
+  </body>
+
+</html>
