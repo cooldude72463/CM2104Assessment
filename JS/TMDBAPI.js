@@ -10,7 +10,7 @@ function validate(){
 			}
 }
 
-function yes(){
+function ShowMovies(){
   var searchString = document.location.search;
   searchString = searchString.substring(1);
   var nvPairs = searchString.split("&");
@@ -26,7 +26,7 @@ function yes(){
   for(i = 0; i < string.length; i++){
     value += string[i] + " ";
   }
-  console.log(value);
+  //console.log(value);
   getResultsFromTMDB(value);
   return false;
 }
@@ -52,10 +52,11 @@ function addResultTitles(jsondata){
     if(title == null){
 
     } else {
-      var imgString =  "<div class = oneMovie> <div class = image>" +  img + "</div>";
-      var titleString = "<div class = title> Title:" + title + "  </div>";
-      var yearString = "<div class = year>Release Year:" + year + "</div></div>";
-      htmlstring = imgString + titleString + yearString;
+      var link = "<div class = link> <a href="MoviePage" + title";
+      var imgString =  "<div class = image>" +  img + "</div>";
+      var titleString = "<div class = title> Title:" + title + "  </div></div>";
+      //var yearString = "<div class = year>Release Year:" + year + "</div></div>";
+      htmlstring = link + imgString + titleString;
       console.log(htmlstring);
       //htmlstring = "<div class = oneMovie> <div class = image>" +  img + "</div> <div class = title> Title:" + title + "  </div> <div class = year>Release Year:" + year + "</div></div>";
       $("#searchResults").append(htmlstring);
