@@ -112,11 +112,11 @@ function addResultTitles(jsondata){
       var string = title;
       var url = string[0];
 
-      for(i = 1; i < string.length; i++){
-        if(string[i] == " "){
+      for(var h = 1; i < string.length; h++){
+        if(string[h] == " "){
           url += "+"
         } else {
-          url += string[i]
+          url += string[h]
         }
       }
 
