@@ -103,7 +103,7 @@ function addResultTitles(jsondata){
   var counter = 0;
   console.log(jsondata.total_results-1)
 
-  for(var i = 0; i < jsondata.total_results-1; i++){
+  for(var i = 0; i < jsondata.results.length; i++){
     if(jsondata.results[i].title == null){
     } else {
       var title = jsondata.results[i].title;
@@ -127,14 +127,15 @@ function addResultTitles(jsondata){
       var temp3 = "<div class = poster>" + img + "</div>"
       var temp4 = "<div class = title>" + title + "</div>"
       var temp5 = "</div>"
-      var htmlstring = temp1 + temp2 + temp3 + temp4 + temp5
-      $("#searchResults").append(htmlstring);
+      var htmlstring += temp1 + temp2 + temp3 + temp4 + temp5
+
       //console.log(htmlstring);
 
       counter++;
       console.log(counter);
     }
   }
+  $("#searchResults").append(htmlstring);
 }
 
 
