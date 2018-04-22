@@ -78,13 +78,6 @@ function addResultTitles(jsondata){
 }
 
 
-function getResultsFromTMDB2(value){
-  var url = "https://api.themoviedb.org/3/search/multi?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page=1&include_adult=false&query="+value;
-  $.getJSON(url, function(jsondata){
-    addResult(jsondata);
-  });
-}
-
 function yes(){
   var searchString = document.location.search;
   searchString = searchString.substring(1);
@@ -102,32 +95,30 @@ function yes(){
     value += string[i] + " ";
   }
   //console.log(value);
-  getResultsFromTMDB2(value);
+  addResult(value);
   return false;
 }
 
 function addResult(jsondata){
   var htmlstring = "";
   //console.log(jsondata);
-  var counter = 0;
-  for(var i = 0; counter < 10; i++){
-    var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[i].poster_path;
-    console.log(poster);
-    var title = jsondata.results[i].title;
-    var year = jsondata.results[i].release_date;
-    var img = "<img src="+poster+" alt=poster>";
-    if(title == null){
+  var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results.poster_path;
+  console.log(poster);
+  var title = jsondata.results.title;
+  var year = jsondata.results.release_date;
+  var img = "<img src="+poster+" alt=poster>";
+  if(title == null){
 
-    } else {
-      var link = "<div class = link> <a href="+"MoviePage"+" + title";
-      var imgString =  "<div class = image>" +  img + "</div>";
-      var titleString = "<div class = title>" + title + "  </div></div>";
-      //var yearString = "<div class = year>Release Year:" + year + "</div></div>";
-      htmlstring = link + imgString + titleString;
-      console.log(htmlstring);
-      //htmlstring = "<div class = oneMovie> <div class = image>" +  img + "</div> <div class = title> Title:" + title + "  </div> <div class = year>Release Year:" + year + "</div></div>";
-      $("#searchResults").append(htmlstring);
-      counter++;
+  } else {
+    var link = "<div class = link> <a href="+"MoviePage"+" + title";
+    var imgString =  "<div class = image>" +  img + "</div>";
+    var titleString = "<div class = title>" + title + "  </div></div>";
+    //var yearString = "<div class = year>Release Year:" + year + "</div></div>";
+    htmlstring = link + imgString + titleString;
+    console.log(htmlstring);
+    //htmlstring = "<div class = oneMovie> <div class = image>" +  img + "</div> <div class = title> Title:" + title + "  </div> <div class = year>Release Year:" + year + "</div></div>";
+    $("#searchResults").append(htmlstring);
+
     }
   }
 }
