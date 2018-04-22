@@ -10,9 +10,9 @@
   <div id="menubar"> <!-- holds the menubar -->
     <nav> <!--Login and Logout Menubar-->
       <ul>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
+          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
+          <li><button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Sign Up</button></li>
+        </ul>
     </nav>
   </div>
 
@@ -20,5 +20,89 @@
     <form name="search" method="get" onsubmit="return validate()" action="/SearchPage" id="searchform">
       <input type="text" name = "q" id="searchbox" size="40">
       <input type="submit" value="X" id="submit">
+    </form>
+  </div>
+
+
+  <div id="id01" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="">&times;</span>
+        <img src="AccountManagementImage.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label for="uname1"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname1" required>
+
+        <label for="psw1"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw1" required>
+
+        <button type="submit" style="background-color:#336699">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container" style="background-color:#336699">
+        <!--<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> -->
+        <!--<span class="psw">Forgot <a href="#">password?</a></span> -->
+      </div>
+    </form>
+  </div>
+
+
+  <div id="id02" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="">&times;</span>
+        <img src="AccountManagementImage.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <button type="submit" style="background-color:#336699">Logout</button>
+      </div>
+
+      <div class="container" style="background-color:#336699">
+        <!--<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> -->
+        <!--<span class="psw">Forgot <a href="#">password?</a></span> -->
+      </div>
+    </form>
+  </div>
+
+
+  <div id="id03" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id03').style.display='none'" class="close" title="">&times;</span>
+        <img src="AccountManagementImage.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label for="forename"><b>First Name*</b></label>
+        <input type="text" placeholder="Enter First Name" name="forename">
+
+        <label for="surname"><b>Last Name*</b></label>
+        <input type="text" placeholder="Enter Password" name="surname">
+
+        <label for="uname2"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname2" required>
+
+        <label for="psw2"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw2" required>
+
+        <button type="submit" style="background-color:#336699">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container" style="background-color:#336699">
+        <!--<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> -->
+        <!--<span class="psw">Forgot <a href="#">password?</a></span> -->
+      </div>
     </form>
   </div>

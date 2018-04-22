@@ -190,7 +190,23 @@ function addResult(jsondata){
   }
 }
 
+// Get the modal
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  var modal = document.getElementById('id01');
+  var modal2 = document.getElementById('id02');
+  var modal3 = document.getElementById('id03');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    else if(event.target == modal2) {
+        modal2.style.display = "none";
+    }
+    else if(event.target == modal3) {
+      modal3.style.display = "none";
+    }
+}
 
 function motd(){
   var motdArray = [" I did not hit her, it's not true! It's bullshit! I did not hit her! [throws water bottle]","Oh hi Mark!","Hi doggie!","You betrayed me! You're not good. You, you're just a chicken. Chip-chip-chip-chip-cheep-cheep."];
