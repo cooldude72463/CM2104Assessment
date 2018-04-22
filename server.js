@@ -11,7 +11,7 @@ var usersDB;
 MongoClient.connect(url, function(err, database) {
   if (err) throw err;
   usersDB = database;
-  app.listen(8080);
+  //app.listen(8080);
   console.log('listening on 8080');
 });
 
@@ -31,10 +31,10 @@ app.post('/adduser', function(req, res) {
   //Checks to see if you're logged in
   if(!req.session.loggedin){res.redirect('/login');return;}
 
-  NEED FUNCTION TO ADD THE USERS DATA TO THIS VARIABLE
+  //NEED FUNCTION TO ADD THE USERS DATA TO THIS VARIABLE
   var userdata = "Put data here";
 
-  SAVES DATA TO UsersInfo.json
+  //SAVES DATA TO UsersInfo.json
   db.collection('UsersInfo').save(userdata, function(err, result) {
     if (err) throw err;
     console.log('Saved')
