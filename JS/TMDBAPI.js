@@ -104,6 +104,7 @@ function addResultTitles(jsondata){
   console.log(jsondata.total_results-1)
 
   for(var i = 0; i < jsondata.results.length; i++){
+    console.log("i:"+i)
     if(jsondata.results[i].title == null){
     } else {
       var title = jsondata.results[i].title;
