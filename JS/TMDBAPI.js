@@ -44,7 +44,7 @@ function addResultTitles(jsondata){
   //console.log(jsondata);
   var counter = 0;
   console.log(jsondata.results);
-  for(var i = 0; i < jsondata.results.length; i++){
+  for(var i = 0; counter < i; i++){
     if(jsondata.results[i].title == null){
       console.log("Why?");
     } else {
@@ -111,7 +111,7 @@ function addResult(jsondata){
   var htmlstring = "";
   var title = jsondata.results[0].title;
   var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[0].poster_path;
-  var description = json.results[0].overview;
+  var description = jsondata.results[0].overview;
 
   var img = "<img src="+poster+" alt=poster>";
   if(title == null){
