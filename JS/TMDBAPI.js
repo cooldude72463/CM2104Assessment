@@ -57,7 +57,7 @@ function addLeastContent(values){
 
 function addLowestContent(values){
   console.log(values);
-  var poster = "http://image.tmdb.org/t/p/w92" + values.results[values.results.length-1].poster_path;
+  var poster = "http://image.tmdb.org/t/p/w780" + values.results[values.results.length-1].poster_path;
   var title = values.results[values.results.length-1].title;
   var temp1 = "<img src="+poster+" alt="+title+">"
   var temp2 = "<h1>"+title+"</h1>"
