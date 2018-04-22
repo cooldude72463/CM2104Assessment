@@ -44,7 +44,11 @@ app.post('/', function(req, res) {
         } else if($_POST['form'] == "SignUp"){
           db.collection('UserInfo').find(req.body).toArray(function(err, result){
             if (err) throw err;
-            console.log(req.body.username);
+            if(result.length == 0){
+              console.log("nope");
+            }else{
+              console.log("yep");
+            }
           })
         } else {
           console.log("What are you doing?");
