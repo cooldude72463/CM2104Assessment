@@ -24,7 +24,8 @@ function addContent(values){
   var temp1 = "<img src="+poster+" alt="+title+">"
   var temp2 = "<h1>"+title+"</h1>"
   var htmlstring = temp1 + temp2
-  $(".NewestAddition").append(htmlstring);
+  console.log(htmlstring);
+  $("#NewestAddition").append(htmlstring);
 }
 
 function getResultsFromTMDB(value){
