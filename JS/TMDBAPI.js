@@ -31,6 +31,8 @@ function Content(){
       addLowestContent(jsondata);
     });
   });
+  headingScale();
+
 }
 
 function addNewestContent(values){
@@ -197,4 +199,16 @@ function motd(){
 
   document.getElementById("Title").innerHTML = motdArray[Math.floor((Math.random() * motdArray.length-1) + 1)];
   //document.getElementById("subheader").innerHTML = motdArray[Math.floor((Math.random() * motdArray.length-1) + 1)];
+}
+
+function headingScale(){
+  var element1 = document.getElementById("NewestAddition");
+  var element2 = document.getElementById("LeastPopular");
+  var element3 = document.getElementById("LowestRated");
+
+
+  if(element1.length >= 26 ){
+    element1.style.fontSize = "xx-small";
+  }
+
 }
