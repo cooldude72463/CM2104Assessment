@@ -54,8 +54,12 @@ function addResultTitles(jsondata){
     } else {
       var string = title;
       var url = string[0];
+      console.log(url);
       for(i = 1; i < string.length; i++){
-        url += "+"+string[i];
+        if(string[i].equals(" ")){
+        } else {
+
+        }
       }
       var link = "MoviePage?t=" + url;
       console.log(link);
@@ -63,7 +67,7 @@ function addResultTitles(jsondata){
       var temp2 = "<a href="+ link +">"
       var temp3 = "<div class = poster>" + img + "</div>"
       var temp4 = "<div class = title>" + title + "</div>"
-      var temp5 = "</a></div>"
+      var temp5 = "</div>"
       var htmlstring = temp1 + temp2 + temp3 + temp4 + temp5
       console.log(htmlstring);
       //htmlstring = "<div class = oneMovie> <div class = image>" +  img + "</div> <div class = title> Title:" + title + "  </div> <div class = year>Release Year:" + year + "</div></div>";
