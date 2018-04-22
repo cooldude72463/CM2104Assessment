@@ -40,8 +40,8 @@ function addNewestContent(values){
 
 function addLeasttContent(values){
   console.log(values);
-  var poster = "http://image.tmdb.org/t/p/w92" + values.poster_path;
-  var title = values.title;
+  var poster = "http://image.tmdb.org/t/p/w92" + values.results[19].poster_path;
+  var title = values.results[19].title;
   var temp1 = "<img src="+poster+" alt="+title+">"
   var temp2 = "<h1>"+title+"</h1>"
   var htmlstring = temp1 + temp2
@@ -51,8 +51,8 @@ function addLeasttContent(values){
 
 function addLowestContent(values){
   console.log(values);
-  var poster = "http://image.tmdb.org/t/p/w92" + values.poster_path;
-  var title = values.title;
+  var poster = "http://image.tmdb.org/t/p/w92" + values.results[19].poster_path;
+  var title = values.results[19].title;
   var temp1 = "<img src="+poster+" alt="+title+">"
   var temp2 = "<h1>"+title+"</h1>"
   var htmlstring = temp1 + temp2
