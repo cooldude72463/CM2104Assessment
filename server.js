@@ -4,7 +4,8 @@ const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb://localhost:27017/MovieReviews";
 const session = require('express-session'); //npm install express-session
 const bodyParser = require('body-parser');
-
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser());
 var app = express();
 
 
@@ -48,7 +49,6 @@ app.post('/', function(req, res) {
 
 app.use(express.static('public'))
 app.use(express.static(__dirname + '/views'));
-app.use(bodyParser.urlencoded({extended:true}))
 
 app.listen(8080);
 console.log('8080 is the magic port');
