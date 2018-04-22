@@ -12,11 +12,11 @@ app.set('view engine', 'ejs');
 
 //THIS CODE BELOW SHOULD CREATE A DATABASE
 
-var usersDB;
+var db;
 
 MongoClient.connect(url, function(err, database) {
   if (err) throw err;
-  usersDB = database;
+  db = database;
   console.log('listening on 8080');
 });
 
