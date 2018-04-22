@@ -43,8 +43,7 @@ app.post('/', function(req, res) {
             res.redirect('/')
           })
         } else if($_POST['form'] == "SignUp"){
-
-          db.collection('UserInfo').find(req.body).toArray(function(err, result) {
+          db.collection('UserInfo').find(req.body).toArray(function(err, result){
             if (err) throw err;
             console.log(req.body.username);
           })
