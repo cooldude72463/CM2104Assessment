@@ -43,6 +43,7 @@ function addResultTitles(jsondata){
   var htmlstring = "";
   //console.log(jsondata);
   var counter = 0;
+  console.log(jsondata.results);
   for(var i = 0; i < jsondata.results.length; i++){
     if(jsondata.results[i].title == null){
 
@@ -110,6 +111,7 @@ function addResult(jsondata){
   var htmlstring = "";
   var title = jsondata.results[0].title;
   var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[0].poster_path;
+  var description = json.results[0].overview;
 
   var img = "<img src="+poster+" alt=poster>";
   if(title == null){
@@ -117,8 +119,9 @@ function addResult(jsondata){
   } else {
     var imgString =  "<div class = image>" +  img + "</div>";
     var titleString = "<div class = title>" + title + "</div>";
+    var descriptionString = "<div class = description>" + description + "</div>";
     //var yearString = "<div class = year>Release Year:" + year + "</div></div>";
-    htmlstring = imgString + titleString;
+    htmlstring = imgString + titleString + descriptionString;
     console.log(htmlstring);
     //htmlstring = "<div class = oneMovie> <div class = image>" +  img + "</div> <div class = title> Title:" + title + "  </div> <div class = year>Release Year:" + year + "</div></div>";
     $("#searchResults").append(htmlstring);
