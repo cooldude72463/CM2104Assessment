@@ -102,10 +102,10 @@ function yes(){
 function addResult(jsondata){
   var htmlstring = "";
   //console.log(jsondata);
-  var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results.poster_path;
+  var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[0].poster_path;
   console.log(poster);
-  var title = jsondata.results.title;
-  var year = jsondata.results.release_date;
+  var title = jsondata.results[0].title;
+  var year = jsondata.results[0].release_date;
   var img = "<img src="+poster+" alt=poster>";
   if(title == null){
 
