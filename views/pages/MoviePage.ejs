@@ -3,6 +3,7 @@
   <head>
     <% include ../partials/head %>
     <title>Movie Page</title>
+    <script type="text/javascript" src="/JS/Login.js"></script>
 
   </head>
   <header>
@@ -13,6 +14,13 @@
 
     <main>
       <div id = "searchResults">
+
+        <form onsubmit="Login()">
+          <input type="text" name="firstname" id="firstname">
+          <input type="text" name="surname" id="surname">
+          <input type="text" name="username" id="username">
+          <input type="password" name="password" id="password">
+        </form>
 
       </div>
     </main>
