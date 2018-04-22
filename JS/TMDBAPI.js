@@ -44,10 +44,10 @@ function addResultTitles(jsondata){
   //console.log(jsondata);
   var counter = 0;
   for(var i = 0; counter < 10; i++){
-    var title = jsondata.results[i].title;
-    if(title == null){
+    if(jsondata.results[i].title == null){
 
     } else {
+      var title = jsondata.results[i].title;
       var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[i].poster_path;
       var string = title;
       var url = string[0];
