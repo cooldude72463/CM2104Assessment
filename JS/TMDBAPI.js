@@ -103,7 +103,7 @@ function addResultTitles(jsondata){
   var counter = 0;
   console.log(jsondata.results.length)
   for(int i = 0; i < 20; i++){
-    console.log(jsondata.results[i])''
+    console.log(jsondata.results[i])
   }
   for(var i = 0; i < jsondata.results.length; i++){
     console.log(jsondata.results[i].title);
