@@ -85,7 +85,7 @@ function getResultsFromTMDB2(value){
   });
 }
 
-function ShowMovies(){
+function yes(){
   var searchString = document.location.search;
   searchString = searchString.substring(1);
   var nvPairs = searchString.split("&");
