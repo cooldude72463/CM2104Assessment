@@ -4,11 +4,10 @@ const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb://localhost:27017/MovieReviews";
 const session = require('express-session'); //npm install express-session
 const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({extended:true}))
-app.use(bodyParser());
 var app = express();
 
-
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser());
 app.set('view engine', 'ejs');
 
 //THIS CODE BELOW SHOULD CREATE A DATABASE
