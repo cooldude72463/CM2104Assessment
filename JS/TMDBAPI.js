@@ -94,7 +94,7 @@ function yes(){
   for(i = 0; i < string.length; i++){
     value += string[i] + " ";
   }
-  //console.log(value);
+  console.log(value);
   getResultsFromTMDB2(value);
   return false;
 }
@@ -113,6 +113,7 @@ function addResult(jsondata){
   var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results.poster_path;
   console.log(poster);
   var title = jsondata.results.title;
+  console.log(title);
   var year = jsondata.results.release_date;
   var img = "<img src="+poster+" alt=poster>";
   if(title == null){
