@@ -5,7 +5,7 @@ body{
   width:60%;
   margin: 0 auto;
 
-  font-family: 'Viga', sans-serif;
+  /*font-family: 'Viga', sans-serif;*/
 }
 
 header{
@@ -86,10 +86,9 @@ h3 {
 
 /* element manipulation */
 
-
+/*
 #menubar {
   position:absolute;
-}/*
   top:15%;
   text-align:center;
   right: 46%;
@@ -167,6 +166,7 @@ h3 {
 /* end ofelement manipulation */
 
 /*nav bar css*/
+/*
 nav>ul {
   list-style-type:none;
   margin:0;
