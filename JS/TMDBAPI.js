@@ -52,7 +52,12 @@ function addResultTitles(jsondata){
     if(title == null){
 
     } else {
-      var link = "MoviePage?t=" + jsondata.results[i].title;;
+      var string = title;
+      var url = string[0];
+      for(i = 1; i < string.length; i++){
+        url += "+"+string[i];
+      }
+      var link = "MoviePage?t=" + url;
       console.log(link);
       var temp1 = "<div class = movieLink>"
       var temp2 = "<a href="+ link +">"
