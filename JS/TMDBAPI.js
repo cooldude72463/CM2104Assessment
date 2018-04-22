@@ -44,14 +44,11 @@ function addResultTitles(jsondata){
   //console.log(jsondata);
   var counter = 0;
   for(var i = 0; counter < 10; i++){
-    console.log(jsondata.results[i].poster_path);
-    var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[i].poster_path;
-    console.log(poster);
     var title = jsondata.results[i].title;
-    var img = "<img src="+poster+" alt=Poster for "+title+">";
     if(title == null){
 
     } else {
+      var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[i].poster_path;
       var string = title;
       var url = string[0];
       for(i = 1; i < string.length; i++){
@@ -61,6 +58,8 @@ function addResultTitles(jsondata){
           url += string[i]
         }
       }
+
+      var img = "<img src="+poster+" alt=Poster for "+title+">";
 
       var link = "MoviePage?q=" + url;
       var temp1 = "<div class = movieLink>"
