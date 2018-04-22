@@ -101,7 +101,7 @@ function addResultTitles(jsondata){
   var htmlstring = "";
   console.log(jsondata);
   var counter = 0;
-
+console.log(jsondata.results.length)
   for(var i = 0; i < jsondata.results.length; i++){
     console.log(jsondata.results[i].title);
     console.log(jsondata.results[i].vote_average);
