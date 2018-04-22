@@ -13,18 +13,23 @@ function validate(){
 function Content(){
   var url = "https://api.themoviedb.org/3/movie/latest?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US"
   $.getJSON(url, function(jsondata){
-    addResultTitles(jsondata);
+    addContent(jsondata);
   });
 }
 
 function addContent(values){
   console.log(values);
+  var poster = "http://image.tmdb.org/t/p/w92" + values.poster_path;
+  var title = values.title;
+  var temp1 = "<img src="+poster+" alt="+title+">"
+  var temp2 = "<h1>"+title+"</h1>"
+  $(".NewestAddition").append(htmlstring);
 }
 
 function getResultsFromTMDB(value){
   var url = "https://api.themoviedb.org/3/search/movie?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page=1&include_adult=false&query="+value;
   $.getJSON(url, function(jsondata){
-    addContent(jsondata);
+    addResultTitles(jsondata);
   });
 }
 
