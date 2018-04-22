@@ -102,7 +102,7 @@ function yes(){
 function getResultsFromTMDB(value){
   var url = "https://api.themoviedb.org/3/search/movie?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page=1&include_adult=false&query="+value;
   $.getJSON(url, function(jsondata){
-    addResults(jsondata)
+    addResult(jsondata)
   });
 }
 
