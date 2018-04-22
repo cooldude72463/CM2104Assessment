@@ -40,7 +40,7 @@ function addNewestContent(values){
   var temp1 = "<img src="+poster+" alt="+title+">"
   var temp2 = "<h1>"+title+"</h1>"
   var htmlstring = temp1 + temp2
-  console.log(htmlstring);
+  //console.log(htmlstring);
   $("#NewestAddition").append(htmlstring);
 }
 
@@ -51,7 +51,7 @@ function addLeastContent(values){
   var temp1 = "<img src="+poster+" alt="+title+">"
   var temp2 = "<h1>"+title+"</h1>"
   var htmlstring = temp1 + temp2
-  console.log(htmlstring);
+  //console.log(htmlstring);
   $("#LeastPopular").append(htmlstring);
 }
 
@@ -62,7 +62,7 @@ function addLowestContent(values){
   var temp1 = "<img src="+poster+" alt="+title+">"
   var temp2 = "<h1>"+title+"</h1>"
   var htmlstring = temp1 + temp2
-  console.log(htmlstring);
+  //console.log(htmlstring);
   $("#LowestRated").append(htmlstring);
 }
 
@@ -99,12 +99,12 @@ function ShowMovies(){
 
 function addResultTitles(jsondata){
   var htmlstring = "";
-  console.log(jsondata);
+  //console.log(jsondata);
   var counter = 0;
-  console.log(jsondata.total_results-1)
+  //console.log(jsondata.total_results-1)
 
   for(var i = 0; i < jsondata.results.length; i++){
-    console.log("i:"+i)
+    //console.log("i:"+i)
     if(jsondata.results[i].title == null){
     } else {
       var title = jsondata.results[i].title;
@@ -131,9 +131,7 @@ function addResultTitles(jsondata){
       htmlstring += temp1 + temp2 + temp3 + temp4 + temp5
 
       //console.log(htmlstring);
-
-      counter++;
-      console.log(counter);
+      //console.log(counter);
     }
     counter++;
   }
