@@ -48,28 +48,16 @@ function addResultTitles(jsondata){
     console.log(poster);
     var title = jsondata.results[i].title;
     var year = jsondata.results[i].release_date;
-    var img = "<img src="+poster+" alt=poster>";
+    var img = "<img src="+poster+" alt=Poster for "+title+">";
     if(title == null){
 
     } else {
-
-      var temp1 = ""+<div id=clickedItem>+""
-      var temp3 = "<a href=/MoviePage?="+title+">"
-      var temp4 = ""+<div class = image>  img  </div>+""
-      var temp5 = ""+<div class = title> title </div>+""
-      var temp6 = ""+</div>+""
-    //  <form action="/MoviePage">
-
-      //</form>
-
-      /*
-      var link = "<div class = link> <a name = "+"t"+" href="+"MoviePage"+title+">";
-      var imgString =  "<div class = image>" +  img + "</div>";
-      var titleString = "<div class = title>" + title + "  </div></div>";
-      //var yearString = "<div class = year>Release Year:" + year + "</div></div>";
-      htmlstring = link + imgString + titleString;
-      */
-      htmlstring = temp1 + temp3 + temp4 + temp5 + temp6
+      var temp1 = "<div class = movieLink>"
+      var temp2 = "<a href=/MoviePage>"
+      var temp3 = "<div class = poster>" + img + "</div>"
+      var temp4 = "<div class = title>" + title + "</div>"
+      var temp5 = "</div>"
+      var htmlstring = temp1 + temp2 + temp3 + temp4 + temp5
       console.log(htmlstring);
       //htmlstring = "<div class = oneMovie> <div class = image>" +  img + "</div> <div class = title> Title:" + title + "  </div> <div class = year>Release Year:" + year + "</div></div>";
       $("#searchResults").append(htmlstring);
