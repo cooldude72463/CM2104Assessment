@@ -7,6 +7,7 @@ function Login(){
   var username = document.getElementById("username");
   var password = document.getElementById("password");
   var userdata = "{username:"+username+", password:"+password+", firstname:"+firstname+", surname:"+surname+"}"
+  console.log(userdata);
 
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
