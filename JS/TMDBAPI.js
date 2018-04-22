@@ -43,11 +43,12 @@ function addResultTitles(jsondata){
   var htmlstring = "";
   //console.log(jsondata);
   var counter = 0;
-  console.log(jsondata.results);
-  for(var i = 0; counter < i; i++){
+
+  for(var i = 0; i < jsondata.results.length; i++){
     if(jsondata.results[i].title == null){
-      console.log("Why?");
+
     } else {
+      console.log(jsondata.results[i].title);
       var title = jsondata.results[i].title;
       var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[i].poster_path;
       var string = title;
@@ -70,8 +71,9 @@ function addResultTitles(jsondata){
       var temp4 = "<div class = title>" + title + "</div>"
       var temp5 = "</div>"
       var htmlstring = temp1 + temp2 + temp3 + temp4 + temp5
-      console.log(htmlstring);
       $("#searchResults").append(htmlstring);
+      //console.log(htmlstring);
+
       counter++;
       console.log(counter);
     }
