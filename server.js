@@ -6,14 +6,14 @@ app.set('view engine', 'ejs');
 
 //THIS CODE BELOW SHOULD CREATE A DATABASE
 
-//var usersDB;
+var usersDB;
 
-//MongoClient.connect(url, function(err, database) {
-  //if (err) throw err;
-  //usersDB = database;
-  //app.listen(8080);
-  //console.log('listening on 8080');
-//});
+MongoClient.connect(url, function(err, database) {
+  if (err) throw err;
+  usersDB = database;
+  app.listen(8080);
+  console.log('listening on 8080');
+});
 
 app.get('/', function(req, res) {
  res.render('pages/MainPage');
@@ -27,22 +27,22 @@ app.get('/MoviePage', function(req, res) {
  res.render('pages/MoviePage');
 });
 
-//app.post('/adduser', function(req, res) {
+app.post('/adduser', function(req, res) {
   //Checks to see if you're logged in
-  //if(!req.session.loggedin){res.redirect('/login');return;}
+  if(!req.session.loggedin){res.redirect('/login');return;}
 
-  //NEED FUNCTION TO ADD THE USERS DATA TO THIS VARIABLE
-  //var userdata = "Put data here";
+  NEED FUNCTION TO ADD THE USERS DATA TO THIS VARIABLE
+  var userdata = "Put data here";
 
-  //SAVES DATA TO UsersInfo.json
-  //db.collection('UsersInfo').save(userdata, function(err, result) {
-    //if (err) throw err;
-    //console.log('Saved')
-    //res.redirect('/')
-  //})
-//});
+  SAVES DATA TO UsersInfo.json
+  db.collection('UsersInfo').save(userdata, function(err, result) {
+    if (err) throw err;
+    console.log('Saved')
+    res.redirect('/')
+  })
+});
 
-  
+
 app.use(express.static(__dirname + '/views'));
 
 app.listen(8080);
