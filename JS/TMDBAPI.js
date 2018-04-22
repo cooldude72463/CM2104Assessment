@@ -95,11 +95,11 @@ function yes(){
     value += string[i] + " ";
   }
   //console.log(value);
-  addResult(value);
+  getResultsFromTMDB2(value);
   return false;
 }
 
-function getResultsFromTMDB(value){
+function getResultsFromTMDB2(value){
   var url = "https://api.themoviedb.org/3/search/movie?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page=1&include_adult=false&query="+value;
   $.getJSON(url, function(jsondata){
     addResult(jsondata)
