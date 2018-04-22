@@ -57,8 +57,9 @@ function addResultTitles(jsondata){
       console.log(url);
       for(i = 1; i < string.length; i++){
         if(string[i] == " "){
+          url += "+"
         } else {
-
+          url += string[i]
         }
       }
       var link = "MoviePage?t=" + url;
