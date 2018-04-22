@@ -47,7 +47,7 @@ function addResultTitles(jsondata){
   for(var i = 0; i < jsondata.results.length; i++){
     console.log(jsondata.results[i].title);
     if(jsondata.results[i].title == null){
-
+      console.log(jsondata.results[i].vote_average);
     } else {
       var title = jsondata.results[i].title;
       var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[i].poster_path;
