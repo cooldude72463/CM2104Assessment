@@ -90,7 +90,7 @@ function yes(){
   return false;
 }
 
-function addResultTitles(jsondata){
+function addResult(jsondata){
   var htmlstring = "";
   //console.log(jsondata);
   var counter = 0;
