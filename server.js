@@ -34,8 +34,7 @@ app.get('/MoviePage', function(req, res) {
 
 
 app.post('/', function(req, res) {
-  if(isset($_POST['form'])){
-    if($_POST['form'] == "Login"){
+  if($_POST['form'] == "Login"){
           db.collection('UserInfo').save(req.body, function(err, result) {
             if (err) throw err;
             console.log('Saved')
@@ -51,7 +50,7 @@ app.post('/', function(req, res) {
         } else {
           console.log("What are you doing?");
         }
-    }
+
 })
 /*
   db.collection('UserInfo').save(req.body, function(err, result) {
