@@ -32,23 +32,21 @@ app.get('/MoviePage', function(req, res) {
  res.render('pages/MoviePage');
 });
 
-/*
-app.post('/adduser', function(req, res) {
+
+app.post('/', function(req, res) {
   //Checks to see if you're logged in
-  if(!req.session.loggedin){res.redirect('/login');return;}
 
   //NEED FUNCTION TO ADD THE USERS DATA TO THIS VARIABLE
-  var userdata = "Put data here";
 
   //SAVES DATA TO UsersInfo.json
-  db.collection('UserInfo').save(userdata, function(err, result) {
+  db.collection('UserInfo').save(req.body, function(err, result) {
     if (err) throw err;
     console.log('Saved')
     res.redirect('/')
   })
 });
 
-*/
+
 app.use(express.static(__dirname + '/views'));
 app.use(bodyParser.urlencoded({extended:true}))
 
