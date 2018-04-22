@@ -85,6 +85,7 @@ h3 {
 /* end of container manipulation */
 
 /* element manipulation */
+/*
 #menubar {
   position:absolute;
   top:15%;
@@ -98,7 +99,7 @@ h3 {
 #menubar>nav>ul>li>a{
   color:#fff;
 }
-
+*/
 
 #searchbar {
   top:20%;
