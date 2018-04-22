@@ -34,7 +34,8 @@ app.get('/MoviePage', function(req, res) {
 
 
 app.post('/', function(req, res) {
-  if($_POST['form'] == "Login"){
+  if(isset($_POST['form'])){
+    if($_POST['form'] == "Login"){
           db.collection('UserInfo').save(req.body, function(err, result) {
             if (err) throw err;
             console.log('Saved')
@@ -43,14 +44,16 @@ app.post('/', function(req, res) {
         }else if($_POST['form'] == "SignUp"){
           db.collection('UserInfo').find().toArray(function(err, result){
             if (err) throw err;
+            
             for(var i = 0; i < result.length; i++){
 
             }
+            res.redirect('/')
           })
         } else {
           console.log("What are you doing?");
         }
-
+    }
 })
 /*
   db.collection('UserInfo').save(req.body, function(err, result) {
