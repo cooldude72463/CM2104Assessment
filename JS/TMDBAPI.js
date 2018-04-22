@@ -46,7 +46,7 @@ function addResultTitles(jsondata){
   console.log(jsondata.results);
   for(var i = 0; i < jsondata.results.length; i++){
     if(jsondata.results[i].title == null){
-
+      console.log("Why?");
     } else {
       var title = jsondata.results[i].title;
       var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[i].poster_path;
