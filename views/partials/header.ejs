@@ -33,11 +33,12 @@
       </div>
 
       <div class="container">
-        <label for="uname1"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname1" required>
+        <input type="hidden" name="form" value="Login">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
 
-        <label for="psw1"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw1" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
 
         <button type="submit" style="background-color:#336699">Login</button>
         <label>
@@ -82,16 +83,17 @@
       </div>
 
       <div class="container">
+        <input type="hidden" name="form" value="SignUp">
         <label for="firstname"><b>First Name*</b></label>
         <input type="text" placeholder="Enter First Name" name="firstname">
 
         <label for="surname"><b>Last Name*</b></label>
         <input type="text" placeholder="Enter Password" name="surname">
 
-        <label for="uname2"><b>Username</b></label>
+        <label for="username"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="username" required>
 
-        <label for="psw2"><b>Password</b></label>
+        <label for="password"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" required>
 
         <button type="submit" style="background-color:#336699">Login</button>

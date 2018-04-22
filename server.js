@@ -34,11 +34,29 @@ app.get('/MoviePage', function(req, res) {
 
 
 app.post('/', function(req, res) {
-  //Checks to see if you're logged in
+  if(isset($_POST['form'])){
+    switch ($_POST['form']) {
+        case "Login":
+          db.collection('UserInfo').save(req.body, function(err, result) {
+            if (err) throw err;
+            console.log('Saved')
+            res.redirect('/')
+          })
+        break;
 
-  //NEED FUNCTION TO ADD THE USERS DATA TO THIS VARIABLE
+        case "SignUp":
+          db.collection('UserInfo').find(req.body).toArray(function(err, result) {
+            if (err) throw err;
+            console.log(req.body.username);
+          })
+        break;
 
-  //SAVES DATA TO UsersInfo.json
+        default:
+            echo "What are you doing?";
+    }
+  }
+})
+/*
   db.collection('UserInfo').save(req.body, function(err, result) {
     if (err) throw err;
     console.log('Saved')
@@ -46,6 +64,13 @@ app.post('/', function(req, res) {
   })
 });
 
+app.post('/', function(req, res) {
+  db.collection('UserInfo').find(req.body).toArray(function(err, result) {
+    if (err) throw err;
+    console.log(req.body.username);
+  })
+});
+*/
 app.use(express.static('public'))
 app.use(express.static(__dirname + '/views'));
 
