@@ -107,7 +107,7 @@ function getResultsFromTMDB2(value){
 
 function addResult(jsondata){
   var htmlstring = "";
-  //console.log(jsondata);
+  console.log(jsondata);
   var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[0].poster_path;
   console.log(poster);
   var title = jsondata.results[0].title;
