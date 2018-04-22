@@ -41,11 +41,11 @@ app.post('/', function(req, res) {
             console.log('Saved')
             res.redirect('/')
           })
-        } else if($_POST['form'] == "SignUp"){
-          db.collection('UserInfo').find().toArray(function(err, result){
+        }else if($_POST['form'] == "SignUp"){
+          db.collection('UserInfo').find(req.body).toArray(function(err, result){
             if (err) throw err;
             for(int i = 0; i < result.length; i++){
-              
+
             }
           })
         } else {
