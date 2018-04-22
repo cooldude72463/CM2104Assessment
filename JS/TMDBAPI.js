@@ -18,7 +18,9 @@ function Content(){
 
   var urlLeast = "https://api.themoviedb.org/3/movie/popular?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page=1000"
   $.getJSON(urlLeast, function(jsondata){
-    addLowestContent(jsondata);
+    var urlLeast = "https://api.themoviedb.org/3/movie/popular?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page=+jsondata.total_pages"
+    $.getJSON(urlLeast, function(jsondata){
+    });
   });
 
   var urlLowest = "https://api.themoviedb.org/3/movie/top_rated?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page=1000"
@@ -38,10 +40,10 @@ function addNewestContent(values){
   $("#NewestAddition").append(htmlstring);
 }
 
-function addLeasttContent(values){
+function addLeastContent(values){
   console.log(values);
-  var poster = "http://image.tmdb.org/t/p/w92" + values.results[19].poster_path;
-  var title = values.results[19].title;
+  var poster = "http://image.tmdb.org/t/p/w92" + values.results[value.results.length-1].poster_path;
+  var title = values.results[value.results.length-1].title;
   var temp1 = "<img src="+poster+" alt="+title+">"
   var temp2 = "<h1>"+title+"</h1>"
   var htmlstring = temp1 + temp2
