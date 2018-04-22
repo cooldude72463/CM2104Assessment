@@ -43,7 +43,7 @@ function addResultTitles(jsondata){
   var htmlstring = "";
   //console.log(jsondata);
   var counter = 0;
-  for(var i = 0; counter < 10; i++){
+  for(var i = 0; i < jsondata.results.length; i++){
     if(jsondata.results[i].title == null){
 
     } else {
@@ -72,6 +72,7 @@ function addResultTitles(jsondata){
       console.log(htmlstring);
       $("#searchResults").append(htmlstring);
       counter++;
+      console.log(counter);
     }
   }
 }
