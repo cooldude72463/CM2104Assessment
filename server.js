@@ -36,7 +36,6 @@ app.get('/MoviePage', function(req, res) {
 app.post('/', function(req, res) {
   if(isset($_POST['form'])){
     if($_POST['form'] == "Login"){
-        case "Login":
           db.collection('UserInfo').save(req.body, function(err, result) {
             if (err) throw err;
             console.log('Saved')
