@@ -56,7 +56,7 @@ function addResultTitles(jsondata){
       var url = string[0];
       console.log(url);
       for(i = 1; i < string.length; i++){
-        if(string[i].equals(" ")){
+        if(string[i] == " "){
         } else {
 
         }
