@@ -11,13 +11,23 @@ function validate(){
 }
 
 function Content(){
-  var url = "https://api.themoviedb.org/3/movie/latest?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US"
-  $.getJSON(url, function(jsondata){
-    addContent(jsondata);
+  var urlNewest = "https://api.themoviedb.org/3/movie/latest?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US"
+  $.getJSON(urlNewest, function(jsondata){
+    addNewestContent(jsondata);
+  });
+
+  var urlLeast = "https://api.themoviedb.org/3/movie/popular?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page=1000"
+  $.getJSON(urlLeast, function(jsondata){
+    addLowestContent(jsondata);
+  });
+
+  var urlLowest = "https://api.themoviedb.org/3/movie/top_rated?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page=1000"
+  $.getJSON(urlLowest, function(jsondata){
+    addLowestContent(jsondata);
   });
 }
 
-function addContent(values){
+function addNewestContent(values){
   console.log(values);
   var poster = "http://image.tmdb.org/t/p/w92" + values.poster_path;
   var title = values.title;
@@ -27,6 +37,29 @@ function addContent(values){
   console.log(htmlstring);
   $("#NewestAddition").append(htmlstring);
 }
+
+function addLeasttContent(values){
+  console.log(values);
+  var poster = "http://image.tmdb.org/t/p/w92" + values.poster_path;
+  var title = values.title;
+  var temp1 = "<img src="+poster+" alt="+title+">"
+  var temp2 = "<h1>"+title+"</h1>"
+  var htmlstring = temp1 + temp2
+  console.log(htmlstring);
+  $("#LeastPopular").append(htmlstring);
+}
+
+function addLowestContent(values){
+  console.log(values);
+  var poster = "http://image.tmdb.org/t/p/w92" + values.poster_path;
+  var title = values.title;
+  var temp1 = "<img src="+poster+" alt="+title+">"
+  var temp2 = "<h1>"+title+"</h1>"
+  var htmlstring = temp1 + temp2
+  console.log(htmlstring);
+  $("#LowestRated").append(htmlstring);
+}
+
 
 function getResultsFromTMDB(value){
   var url = "https://api.themoviedb.org/3/search/movie?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page=1&include_adult=false&query="+value;
