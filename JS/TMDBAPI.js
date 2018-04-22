@@ -51,6 +51,7 @@ function addResultTitles(jsondata){
       var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[i].poster_path;
       var string = title;
       var url = string[0];
+
       for(i = 1; i < string.length; i++){
         if(string[i] == " "){
           url += "+"
@@ -106,11 +107,9 @@ function getResultsFromTMDB2(value){
 
 function addResult(jsondata){
   var htmlstring = "";
-  console.log(jsondata);
-  var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[0].poster_path;
-  console.log(poster);
   var title = jsondata.results[0].title;
-  console.log(title);
+  var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[0].poster_path;
+
   var img = "<img src="+poster+" alt=poster>";
   if(title == null){
 
@@ -118,7 +117,7 @@ function addResult(jsondata){
     var imgString =  "<div class = image>" +  img + "</div>";
     var titleString = "<div class = title>" + title + "</div>";
     //var yearString = "<div class = year>Release Year:" + year + "</div></div>";
-    htmlstring = link + imgString + titleString;
+    htmlstring = imgString + titleString;
     console.log(htmlstring);
     //htmlstring = "<div class = oneMovie> <div class = image>" +  img + "</div> <div class = title> Title:" + title + "  </div> <div class = year>Release Year:" + year + "</div></div>";
     $("#searchResults").append(htmlstring);
