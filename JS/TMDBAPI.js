@@ -41,7 +41,7 @@ function ShowMovies(){
 
 function addResultTitles(jsondata){
   var htmlstring = "";
-  //console.log(jsondata);
+  console.log(jsondata);
   var counter = 0;
 
   for(var i = 0; i < jsondata.results.length; i++){
