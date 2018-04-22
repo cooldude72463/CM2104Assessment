@@ -46,7 +46,7 @@ app.post('/', function(req, res) {
   })
 });
 
-
+app.use(express.static('public'))
 app.use(express.static(__dirname + '/views'));
 app.use(bodyParser.urlencoded({extended:true}))
 
