@@ -42,7 +42,6 @@ app.post('/', function(req, res) {
   db.collection('UserInfo').save(req.body, function(err, result) {
     if (err) throw err;
     console.log('Saved')
-    res.redirect('/')
   })
 });
 
