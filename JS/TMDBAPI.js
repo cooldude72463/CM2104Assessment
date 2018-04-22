@@ -134,6 +134,7 @@ function addResultTitles(jsondata){
       counter++;
       console.log(counter);
     }
+    counter++;
   }
   $("#searchResults").append(htmlstring);
 }
