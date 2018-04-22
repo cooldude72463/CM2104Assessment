@@ -12,7 +12,7 @@ function Login(){
  output += "<p>" + result[i].username + ", " + result[i].password + ", "+ result[i].firstname + ", "+ result[i].surname + ", </p>"
  output += "</div>"
  }
- $("#searchResults").append(output);
+ console.log(output);
 
   var userdata = "{username:"+username+", password:"+password+", firstname:"+firstname+", surname:"+surname+"}"
   db.collection('UserInfo').save(userdata, function(err, result) {
