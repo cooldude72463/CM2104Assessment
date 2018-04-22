@@ -45,7 +45,7 @@ function addResultTitles(jsondata){
   var counter = 0;
 
   for(var i = 0; i < jsondata.results.length; i++){
-    console.log(jsondata.results[i].name);
+    console.log(jsondata.results[i].title);
     if(jsondata.results[i].title == null){
       console.log(jsondata.results[i].vote_average);
     } else {
