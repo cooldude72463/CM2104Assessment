@@ -34,7 +34,7 @@ function ShowMovies(){
   for(i = 0; i < string.length; i++){
     value += string[i] + " ";
   }
-  //console.log(value);
+  console.log(value);
   getResultsFromTMDB(value);
   return false;
 }
@@ -45,10 +45,10 @@ function addResultTitles(jsondata){
   var counter = 0;
 
   for(var i = 0; i < jsondata.results.length; i++){
+    console.log(jsondata.results[i].title);
     if(jsondata.results[i].title == null){
 
     } else {
-      console.log(jsondata.results[i].title);
       var title = jsondata.results[i].title;
       var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[i].poster_path;
       var string = title;
