@@ -23,6 +23,7 @@ function addContent(values){
   var title = values.title;
   var temp1 = "<img src="+poster+" alt="+title+">"
   var temp2 = "<h1>"+title+"</h1>"
+  var htmlstring = temp1 + temp2
   $(".NewestAddition").append(htmlstring);
 }
 
