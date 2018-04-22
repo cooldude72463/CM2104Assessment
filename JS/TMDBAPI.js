@@ -55,7 +55,7 @@ function addResultTitles(jsondata){
       var link = "MoviePage?t=" + jsondata.results[i].title;;
       console.log(link);
       var temp1 = "<div class = movieLink>"
-      var temp2 = "<a href=/link>"
+      var temp2 = "<a href=/"+link+">"
       var temp3 = "<div class = poster>" + img + "</div>"
       var temp4 = "<div class = title>" + title + "</div>"
       var temp5 = "</div>"
