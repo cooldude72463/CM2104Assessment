@@ -26,7 +26,7 @@ function Content(){
 
   var urlLowest = "https://api.themoviedb.org/3/movie/top_rated?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page=1000"
   $.getJSON(urlLowest, function(jsondata){
-    var urlLeast = "https://api.themoviedb.org/3/movie/top_rated?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page="+jsondata.total_pages
+    var urlLowest = "https://api.themoviedb.org/3/movie/top_rated?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page="+jsondata.total_pages
     $.getJSON(urlLowest, function(jsondata){
       addLowestContent(jsondata);
     });
