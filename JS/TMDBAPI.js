@@ -69,7 +69,7 @@ function addResultTitles(jsondata){
 }
 
 
-function ShowMovie(){
+function yes(){
   var searchString = document.location.search;
   searchString = searchString.substring(1);
   var nvPairs = searchString.split("&");
