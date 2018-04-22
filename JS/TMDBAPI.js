@@ -99,13 +99,21 @@ function yes(){
   return false;
 }
 
+function getResultsFromTMDB(value){
+  var url = "https://api.themoviedb.org/3/search/movie?api_key=95e3a26ca455cd0b5d455ae9fa52acad&language=en-US&page=1&include_adult=false&query="+value;
+  $.getJSON(url, function(jsondata){
+    addResults(jsondata)
+  });
+}
+
 function addResult(jsondata){
   var htmlstring = "";
+
   //console.log(jsondata);
-  var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[0].poster_path;
+  var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results.poster_path;
   console.log(poster);
-  var title = jsondata.results[0].title;
-  var year = jsondata.results[0].release_date;
+  var title = jsondata.results.title;
+  var year = jsondata.results.release_date;
   var img = "<img src="+poster+" alt=poster>";
   if(title == null){
 
