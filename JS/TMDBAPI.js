@@ -70,7 +70,6 @@ function addResultTitles(jsondata){
       var temp5 = "</div>"
       var htmlstring = temp1 + temp2 + temp3 + temp4 + temp5
       console.log(htmlstring);
-      //htmlstring = "<div class = oneMovie> <div class = image>" +  img + "</div> <div class = title> Title:" + title + "  </div> <div class = year>Release Year:" + year + "</div></div>";
       $("#searchResults").append(htmlstring);
       counter++;
     }
@@ -108,13 +107,12 @@ function getResultsFromTMDB2(value){
 
 function addResult(jsondata){
   var htmlstring = "";
-
   //console.log(jsondata);
-  var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results.poster_path;
+  var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[0].poster_path;
   console.log(poster);
-  var title = jsondata.results.title;
+  var title = jsondata.results[0].title;
   console.log(title);
-  var year = jsondata.results.release_date;
+  var year = jsondata.results[0].release_date;
   var img = "<img src="+poster+" alt=poster>";
   if(title == null){
 
