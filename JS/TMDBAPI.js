@@ -44,17 +44,16 @@ function addResultTitles(jsondata){
   //console.log(jsondata);
   var counter = 0;
   for(var i = 0; counter < 10; i++){
+    console.log(jsondata.results[i].poster_path);
     var poster = "http://image.tmdb.org/t/p/w92" + jsondata.results[i].poster_path;
     console.log(poster);
     var title = jsondata.results[i].title;
-    var year = jsondata.results[i].release_date;
     var img = "<img src="+poster+" alt=Poster for "+title+">";
     if(title == null){
 
     } else {
       var string = title;
       var url = string[0];
-      console.log(url);
       for(i = 1; i < string.length; i++){
         if(string[i] == " "){
           url += "+"
@@ -62,7 +61,8 @@ function addResultTitles(jsondata){
           url += string[i]
         }
       }
-      var link = "MoviePage?t=" + url;
+
+      var link = "MoviePage?q=" + url;
       var temp1 = "<div class = movieLink>"
       var temp2 = "<a href="+ link +">"
       var temp3 = "<div class = poster>" + img + "</div>"
@@ -112,14 +112,12 @@ function addResult(jsondata){
   console.log(poster);
   var title = jsondata.results[0].title;
   console.log(title);
-  var year = jsondata.results[0].release_date;
   var img = "<img src="+poster+" alt=poster>";
   if(title == null){
 
   } else {
-    var link = "<div class = link> <a href="+"MoviePage"+" + title";
     var imgString =  "<div class = image>" +  img + "</div>";
-    var titleString = "<div class = title>" + title + "  </div></div>";
+    var titleString = "<div class = title>" + title + "</div>";
     //var yearString = "<div class = year>Release Year:" + year + "</div></div>";
     htmlstring = link + imgString + titleString;
     console.log(htmlstring);
