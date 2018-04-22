@@ -1,6 +1,10 @@
 var express = require('express');
-var app = express();
 const MongoClient = require('mongodb').MongoClient;
+const url = "mongodb://localhost:27017/profiles";
+const session = require('express-session'); //npm install express-session
+const bodyParser = require('body-parser');
+var app = express();
+
 
 app.set('view engine', 'ejs');
 
