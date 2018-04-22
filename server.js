@@ -45,7 +45,7 @@ app.post('/', function(req, res) {
           db.collection('UserInfo').find().toArray(function(err, result){
             if (err) throw err;
             for(int i = 0; i < result.length; i++){
-              if()
+              
             }
           })
         } else {
