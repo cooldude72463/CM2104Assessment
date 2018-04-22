@@ -15,7 +15,6 @@ var usersDB;
 MongoClient.connect(url, function(err, database) {
   if (err) throw err;
   usersDB = database;
-  app.listen(8080);
   console.log('listening on 8080');
 });
 
